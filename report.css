@@ -1,0 +1,16 @@
+h1{
+    text-align:center;
+}
+/* h3{
+    text-align: center;
+} */
+p{
+    margin-left: 2em;
+    font-weight: bold;
+}
+#colon{
+    margin-left: 20px;
+}
+#main{
+    margin-left: 2em;
+}
