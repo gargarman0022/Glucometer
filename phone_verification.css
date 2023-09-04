@@ -1,0 +1,25 @@
+.bdy{
+    background-color:lightblue;
+}
+img{
+    height:100vh;
+    width:70%;
+    display:inline-block;
+    /* position:fixed; */
+}
+.phone{
+    height:100%;
+    flex-grow:1;
+    display:inline-block;
+    background-color: lightblue;
+    
+}
+.btn{
+    margin-left:5em;
+}
+input{
+    width:100%;
+}
+.sec-but{
+    margin-left:6em;
+}
