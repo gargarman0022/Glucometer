@@ -1,5 +1,5 @@
 .bdy{
-    background-color:lightblue;
+    background-color:skyblue;
 }
 img{
     height:100vh;
@@ -8,10 +8,11 @@ img{
     /* position:fixed; */
 }
 .phone{
+    padding:1em;
     height:100%;
     flex-grow:1;
     display:inline-block;
-    background-color: lightblue;
+    background-color: skyblue;
     
 }
 .btn{
