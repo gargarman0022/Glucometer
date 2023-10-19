@@ -1,18 +1,20 @@
 body{
-    background-color:#90EE90 !important;
+    /* background-color:#90EE90 !important; */
+    display:flex;
+    justify-content:center ;
 }
 .frm{
-    margin-top:5vh;
+    margin-top:2vh;
     background-color: white;
     display:border-box;
     border:0.5em solid black;
     border-style:double;
-    margin-left:25em;
-    margin-right:24em;
+    width:50em;
     padding-left:1em;
     padding-top:1em;
     padding-right:1em;
     padding-bottom:1em;
+    margin-bottom: 2vh;
 }
 .box{
     margin-top: 0.5em;
@@ -24,18 +26,34 @@ body{
     align-items: center;
     height:3em;
     width:10em;
-    margin-left:16em;
+    margin-left:40%;
     background-color: #90EE90;
     border:none;
     color:white;
 }
 .txt{
     margin-left:0.25em;
-    font-size: large;
+    font-size: Large;
+    /* margin-bottom: 2em; */
+}
+.txt_bg{
+    margin-left:1.5em;
 }
 .btn{
     width:100%;
 }
 .dropdown-item{
     width:100%
+}
+.Blood{
+    margin-left: 1.5em;
+    height:2.5em;
+    width:12em;
+    margin-bottom: 1.5em;
+    margin-right:1.5 em;
+    
+}
+.txt_db{
+    margin-left:2em;
+    margin-right: 1em;
 }

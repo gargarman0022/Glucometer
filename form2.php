@@ -1,3 +1,20 @@
+<?php
+session_start();
+$_SESSION['name'] = $_POST['name'];
+  
+$_SESSION['age']
+        = $_POST['age'];
+  
+$_SESSION['gen']
+        = $_POST['gen'];
+$_SESSION['height']
+        = $_POST['height'];
+$_SESSION['weight']
+        = $_POST['weight'];
+$_SESSION['contact']
+        = $_POST['contact'];
+           
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,36 +86,13 @@ a {
 </head>
 <body>
 
-<form action="form2.php" method="post">
+<form action="report.php" method="post">
   <div class="container">
-    <h1>Personal Information</h1>
+    <h1>Body Vitals</h1>
     <p>Please fill in the required information.</p>
     <hr>
 
-    <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" id="name" required>
-
-    <label for="age"><b>Age</b></label>
-    <input type="number" placeholder="Enter Age" name="age" id="age" required>
-
-    <label for="gen"><b>Gender</b></label>
-    <br>
-    <br>
-    <input type="radio" name="gen" value = "Male" id="gen" required><b>Male</b>
-    <input type="radio" name="gen" value = "Female" id="gen" required><b>Female</b>
-    <br>
-    <br>
-
-    <label for="height"><b>Height (in m)</b></label>
-    <input type="number" step = "any" placeholder="Enter height" name="height" id="height" required>
-
-    <label for="weight"><b>Weight (in Kg)</b></label>
-    <input type="number" placeholder="Enter weight" name="weight" id="weight" required>
-
-    <label for="contact"><b>Contact</b></label>
-    <input type="number" placeholder="Enter Contact" name="contact" id="contact" required>
-
-<!--     <label for="sbp"><b>Blood Pressure (in mmHg)</b></label>
+    <label for="sbp"><b>Blood Pressure (in mmHg)</b></label>
     <input type="number" placeholder="Enter Systolic Blood Pressure (in milimeters of mercury)" name="sbp" id="sbp" required>
     <input type="number" placeholder="Enter Diastolic Blood Pressure (in milimeters of mercury)" name="dbp" id="dbp" required>
 
@@ -106,12 +100,12 @@ a {
     <input type="number" placeholder="Enter Heart Rate (in beats per minute)" name="hr" id="hr" required>
 
     <label for="spo2"><b>SPO2</b></label>
-    <input type="number" placeholder="Enter SPO2" name="spo2" id="spo2" required> -->
+    <input type="number" placeholder="Enter SPO2" name="spo2" id="spo2" required>
 
 <!--     <label for="bgl"><b>Blood Glucose Level (in mg/dL)</b></label>
     <input type="number" placeholder="Enter Blood Glucose Level" name="bgl" id="bgl" required> -->
     <hr>
-    <button type="submit" class="registerbtn">Next</button>
+    <button type="submit" class="registerbtn">Submit</button>
   </div>
 </form>
 

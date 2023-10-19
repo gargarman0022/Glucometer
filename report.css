@@ -1,4 +1,4 @@
-h1{
+h2{
     text-align:center;
 }
 /* h3{
@@ -6,11 +6,40 @@ h1{
 } */
 p{
     margin-left: 2em;
-    font-weight: bold;
+    font-family: 'Brush Script MT', cursive;
+    font-weight:bold;
 }
 #colon{
     margin-left: 20px;
 }
 #main{
     margin-left: 2em;
+}
+body{
+    background-color: beige;
+/*     background-image: url('pic.png');
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+table, th, td{
+    border:1px solid black;
+    text-align: center;
+}
+.tbl{
+    margin-left: 75em;
+}
+.abc{
+    font-family: 'Brush Script MT', cursive;
+    margin-top: 6em;
+    margin-left: 10em;
+/*     margin-top: -28em; */
+}
+.column {
+    float: left;
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }

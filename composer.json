@@ -1,0 +1,9 @@
+{
+    "name": "arman/twilio-sender",
+    "description": "Twilio demo SMS sender",
+    "type": "project",
+    "require": {
+        "twilio/sdk": "^7.11"
+    },
+    "license": "common"
+}

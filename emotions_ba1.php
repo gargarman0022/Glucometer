@@ -7,24 +7,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Montserrat:wght@100&family=Pixelify+Sans&display=swap');
-        body{
-            font-family: 'AR One Sans', sans-serif;
-        }
         body {
-            /* font-family: Arial, sans-serif; */
+            font-family: Arial, sans-serif;
             text-align: center;
-            
         }
         .bdy{
-          padding: 20px;
-          padding-top: 0;
+            padding: 20px;
+            padding-top:0;
         }
-        nav{
-            background-color: cyan;
-            height:4em;
+        h1 {
+            font-size: 3em;
         }
         .emoji-box {
+          background-color:white;
             /* font-size:3rem; */
             /* user-select: none; */
             cursor: pointer;
@@ -41,18 +36,15 @@
             margin-right: 2em;
             margin-bottom: 2em;
         }
+        .emoji-box:hover{
+          border:2px solid black;
+        }
         .emoji{
+            font-size: 4em;
             user-select: none;
         }
-        img{
-            margin-top:1em;
-            /* height:5em; */
-            width:90%;
-            height:15em;
-        }
         .txt{
-          /* margin-top:-1em; */
-            font-size: 1.5em;
+            font-size: 2em;
             user-select: none;
         }
         .button{
@@ -67,18 +59,9 @@
         .nav-link{
             margin-right: 2em;
         }
-        img{
-            width:12em;
-            height:8em;
-        }
-        .calories{
-          margin-left:1em;
-          width:6em;
-          height: 1.75em;
-          padding-left:0.5em;
-        }
         nav{
-          font-size: 1.25em;
+            height:4em;
+            font-size: 1.25em;
         }
         .logout{
             height:4em;
@@ -93,6 +76,41 @@
     
 </head>
 <body>
+  <?php
+    $conn = mysqli_connect("localhost", "root", "", "appinfo");
+    session_start();
+    $phone = $_SESSION['phone'];
+    if($conn === false){
+        die("ERROR: Could not connect. "
+            . mysqli_connect_error());
+    }
+    $hours_1 = $_REQUEST['hours_1'];
+    $minutes_1 = $_REQUEST['minutes_1'];
+    $hours_2 = $_REQUEST['hours_2'];
+    $minutes_2 = $_REQUEST['minutes_2'];
+    $hours_3 = $_REQUEST['hours_3'];
+    $minutes_3 = $_REQUEST['minutes_3'];
+    // $phone = $_SESSION['phone'];
+    $sql = "INSERT INTO menactivities VALUES (
+        'chanting','20-10-2023',(60*$hours_1) +$minutes_1,1,$phone)";
+    if(($hours_1>0 || $minutes_1>0) && mysqli_query($conn, $sql)){
+        echo "";
+    } 
+    // else{
+    //     echo "ERROR: Hush! Sorry $sql. "
+    //         . mysqli_error($conn);
+    // }
+    $sql_2 = "INSERT INTO menactivities VALUES (
+        'yoga','20-10-2023',(60*$hours_2) +$minutes_2,1,$phone)";
+    if(($hours_2>0 || $minutes_2>0) && mysqli_query($conn, $sql_2)){
+        echo "";
+    } 
+    $sql_3 = "INSERT INTO menactivities VALUES (
+        'Meditation','20-10-2023',(60*$hours_3) +$minutes_3,1,$phone)";
+    if(($hours_3>0 || $minutes_3>0) && mysqli_query($conn, $sql_3)){
+        echo "";
+    }
+  ?>
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
           <!-- <a class="navbar-brand" href="#">Navbar</a> -->
@@ -105,13 +123,13 @@
                 <a class="nav-link active" aria-current="page" href="#">Diet Choices</a>
               </li> -->
               <li class="nav-item">
-                <a class="nav-link active" href="dietchoices.html">Diet Choices</a>
+                <a class="nav-link" href="dietchoices.html">Diet Choices</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="waterintake.php">Water Intake</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="physicalactivities.php">Physical Activities</a>
+                <a class="nav-link active" href="physicalactivities.php">Physical Activities</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="stressrelivingactivities.php">Stress Relieving Activities</a>
@@ -135,11 +153,11 @@
               </li> -->
             </ul>
             <span class = "navbar-brand" href = "#">
-              Hello, Mohit
-              <a href = "login_signup.html">
-                  <img src = "images/logout.png" class="logout">
-              </a>
-          </span>
+                Hello, Mohit
+                <a href = "login_signup.html">
+                    <img src = "images/logout.png" class="logout">
+                </a>
+            </span>
             <!-- <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
@@ -148,33 +166,44 @@
         </div>
     </nav>
     <br>
-  <div class="bdy">
-    <h2>What kind of Diet you have taken today?</h2><br>
-    <div class="emoji-box" id="Fruits" onclick="selectEmoji('Fruits')"><div class="emoji"><img src="images/fruits.jpg"></div> <span class="txt">Fruits</span></div>
-    <div class="emoji-box" id="Soft-drinks" onclick="selectEmoji('Soft-drinks')"><div class="emoji"><img src="images/soft-drinks.jpg"></div> <span class="txt">Soft Drinks</span></div>
-    <div class="emoji-box" id="Chips" onclick="selectEmoji('Chips')"><div class="emoji"><img src="images/chips.jpg"></div> <span class="txt">Chips</span></div>
-    <div class="emoji-box" id="Chappatis" onclick="selectEmoji('Chappatis')"><div class="emoji"><img src="images/chappatis.jpeg"></div> <span class="txt">Chappatis</span></div>
-    <div class="emoji-box" id="Cereals" onclick="selectEmoji('Cereals')"><div class="emoji"><img src="images/cereals.jpg"></div> <span class="txt">Cereals</span></div>
-    <div class="emoji-box" id="Rice" onclick="selectEmoji('Rice')"><div class="emoji"><img src="images/Rice.jpg"></div> <span class="txt">Rice</span></div>
-    <div class="emoji-box" id="Green-Vegetables" onclick="selectEmoji('Green-Vegetables')"><div class="emoji"><img src="images/vegetables.jpg"></div> <span class="txt">Green Vegetables</span></div>
-    <div class="emoji-box" id="Eggs" onclick="selectEmoji('Eggs')"><div class="emoji"><img src="images/Eggs.jpeg"></div> <span class="txt">Eggs</span></div>
-    <div class="emoji-box" id="Chicken" onclick="selectEmoji('Chicken')"><div class="emoji"><img src="images/Chicken.jpeg"></div> <span class="txt">Chicken</span></div><br>
-    <label for="calories"><h4>Number of Calories you consumed :</h4></label>
-    <input type="number" name="calories" class="calories" value="0">
+    <div class="bdy">
+    <h1>How were you feeling before the activity?</h1><br>
+    <button class="emoji-box" id="happy" onclick="location.href='emotions_aa1.php';"><div class="emoji">😊</div> <span class="txt">Happy</span></button>
+    <button class="emoji-box" id="sad" onclick="location.href='emotions_aa1.php';"><div class="emoji">😢</div> <span class="txt">Sad</span></button>
+    <button class="emoji-box" id="angry" onclick="location.href='emotions_aa1.php';"><div class="emoji">😡</div> <span class="txt">Angry</span></button><br>
+    <button class="emoji-box" id="cool" onclick="location.href='emotions_aa1.php';"><div class="emoji">😎</div> <span class="txt">Cool</span></button>
+    <button class="emoji-box" id="sleepy" onclick="location.href='emotions_aa1.php';"><div class="emoji">😴</div> <span class="txt">Sleepy</span></button>
 
-    <br><button class="button" onclick="location.href='result.php';">Submit</button>
-  </div>
+    <!-- <br><button class="button" onclick="location.href='emotions_aa1.php';">Submit</button> -->
+    </div>
     
     <!-- <p>You are feeling: <span id="selected-emoji">😊</span></p> -->
 
     <script>
-        function selectEmoji(emoji) {
-            if(document.getElementById(emoji).style.border=="2px solid red"){
-                document.getElementById(emoji).style.border="";
+        function selectEmoji(emoji) {   
+            /* document.getElementById('selected-emoji').textContent = document.getElementById(emoji).textContent; */
+            if(emoji!='happy'){
+                document.getElementById('happy').style.border = "";
             }
-            else{
-                document.getElementById(emoji).style.border = "2px solid red";
+            if(emoji!='sad'){
+                document.getElementById('sad').style.border = "";
             }
+            if(emoji!='angry'){
+                document.getElementById('angry').style.border = "";
+            }
+            if(emoji!='cool'){
+                document.getElementById('cool').style.border = "";
+            }
+            if(emoji!='sleepy'){
+                document.getElementById('sleepy').style.border = "";
+            }
+            // if(document.getElementById(emoji).style.border=="2px solid red"){
+            //     document.getElementById(emoji).style.border="";
+            // }
+            // else{
+            //     document.getElementById(emoji).style.border = "2px solid red";
+            // }
+            document.getElementById(emoji).style.border = "2px solid red";
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
