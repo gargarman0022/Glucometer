@@ -1,0 +1,118 @@
+body {
+	background-image: url('../images/bgimg.jpg');
+	background-size:cover;
+    /* padding-top: -10px; */
+}
+#init{
+    color:black;
+    text-align: center;
+    font-size:2.5cm;
+}
+.container{
+    display: flex;
+    align-items: center;
+    font-size: 0.5cm;
+    justify-content: center;
+	
+} 
+.btn button{
+    padding: 3px;
+    margin: 30px 30px 3px 0px;
+    border-style: none;
+    background-color: transparent;
+    color: beige;
+    font-size: 18px;
+    font-weight: 550;
+}
+.btn button:hover{
+    border-bottom: 2px solid rgb(91, 243, 131);
+}
+.btn button:focus{
+    border-bottom: 2px solid red;
+}
+.formGroup input{
+    padding-left: 0.5cm;
+    padding-right: 0.5cm;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+    font-size: 0.5cm;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: 0ch;
+}
+input:focus{
+    outline:none;
+    border-bottom: 3px solid rgb(91, 243, 131);
+}
+::placeholder{
+    color: white;
+    font-weight: normal;
+    font-size: 0.5cm;
+}
+.form{
+    padding-left: 2cm;
+    padding-right: 2cm;
+    background-color: rgba(41, 39, 39, 0.3);
+    box-shadow: 0 5px 30px black;
+    /* align-items: center; */
+}
+
+.btn2{
+    padding-top: 7px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 7px;
+    border-style: solid;
+    border-color: black ;
+    border-width: 2px;
+    background-color: green;
+    border-radius: 20px;
+    color: beige;
+    font-size: 0.5cm;
+    margin-left: 45px;
+    margin-bottom: 10px;
+}
+.checkBox{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* display: flex;
+    justify-content: center; */
+}
+.text{
+    /* padding-top: 100px; */
+    color: white;
+}
+#message {
+    display:none;
+    /* margin-left: -40px; */
+    background: transparent;
+    color: black;
+    position: relative;
+    /* padding: 20px; */
+    margin-top: 10px;
+    font-size: 0.5cm;
+  }
+  
+  #message p {
+    /* padding: 10px 35px; */
+    font-size: 18px;
+  }
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+  }
+  
+  /* Add a red text color and an "x" icon when the requirements are wrong */
+  .invalid {
+    color: white;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+  }

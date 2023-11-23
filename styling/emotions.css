@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+.bdy{
+    padding: 20px;
+    padding-top:0;
+}
+h1 {
+    font-size: 3em;
+}
+.nav-link{
+    color:white;
+}
+.navbar-brand{
+    color:white;
+    /* height:2em; */
+}
+.emoji-box {
+  background-color:white;
+    /* font-size:3rem; */
+    /* user-select: none; */
+    cursor: pointer;
+    border:1em solid black;
+    display: inline-block;
+    width: 15em;
+    margin: 10px;
+    font-size: 1em;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+.emoji-box:hover{
+  border:2px solid black;
+}
+.emoji{
+    font-size: 4em;
+    user-select: none;
+}
+.txt{
+    font-size: 2em;
+    user-select: none;
+}
+.button{
+    width:6em;
+    height:3em;
+    margin-top:1em;
+    border-radius: 12px;
+    border-color: rgb(24, 251, 24);
+    border-width: 0px;
+    background-color: rgb(24, 251, 24);
+}
+.nav-link{
+    margin-right: 2em;
+}
+nav{
+    height:4em;
+    font-size: 1.25em;
+}
+.logout{
+    height:4em;
+    width:4em;
+    margin-top:0 !important;
+}

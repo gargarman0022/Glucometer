@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Montserrat:wght@100&family=Pixelify+Sans&display=swap');
+body{
+    font-family: 'AR One Sans', sans-serif;
+}
+body {
+    /* font-family: Arial, sans-serif; */
+    text-align: center;
+    
+}
+.bdy{
+    padding: 20px;
+    padding-top: 0;
+}
+nav{
+    height:4em;
+}
+.nav-link{
+    color:white;
+}
+.navbar-brand{
+    color:white;
+    /* height:2em; */
+}
+.emoji-box {
+    /* font-size:3rem; */
+    /* user-select: none; */
+    cursor: pointer;
+    border:1em solid black;
+    display: inline-block;
+    width: 15em;
+    margin: 10px;
+    font-size: 1em;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+.emoji{
+    user-select: none;
+}
+img{
+    margin-top:1em;
+    /* height:5em; */
+    width:90%;
+    height:15em;
+}
+.txt{
+    /* margin-top:-1em; */
+    font-size: 1.5em;
+    user-select: none;
+}
+.button{
+    width:6em;
+    height:3em;
+    margin-top:1em;
+    border-radius: 12px;
+    border-color: rgb(24, 251, 24);
+    border-width: 0px;
+    background-color: rgb(24, 251, 24);
+}
+.nav-link{
+    margin-right: 2em;
+}
+img{
+    width:12em;
+    height:8em;
+}
+.calories{
+    margin-left:1em;
+    width:6em;
+    height: 1.75em;
+    padding-left:0.5em;
+}
+nav{
+    font-size: 1.25em;
+}
+.logout{
+    height:4em;
+    width:4em;
+    margin-top:0 !important;
+}

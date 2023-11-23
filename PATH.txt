@@ -1,1 +1,26 @@
-PATH=C:\Python311\Scripts\;C:\Python311\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Universal Extractor;C:\Program Files (x86)\Universal Extractor\bin;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\Arman's PC\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Arman's PC\AppData\Local\Microsoft\WindowsApps;C:\Users\Arman's PC\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Arman's PC\AppData\Roaming\npm;C:\Users\Arman's PC\AppData\Roaming\nvm;C:\Program Files\nodejs 
+5.time : clock;
+1.text of navbar : white;
+6.others: type name of activity;
+2. emojis: add emojis;
+subcategories into fruits so that calories can be coounted. on click go to new page, where fruits with counters are dispplayed.
+3.fish 
+4.what stress rel acti did you perform today. 
+8.DROPDOwn
+sleep and water ke alag pages
+7.music, dance,talking to family/friends/others,others
+9.tabular representation of number of hpurs spent in different physical activities.
+10.graphical representation of progress made over a week or month showing total hours of physcial activities
+11.repeat above for stress activities.
+
+
+insttead of showing moon you can show sleep emoji on whatsapp
+onload function in html DOM structure.you can put a constraint when you load the results page that it shows stats or graphs only when some data is selected else it shows a blank page(here you write no results as there is no data).
+change permissions for webpages folder to 777.(chmod)
+change chappati to chappati/bread -> glutten free chappati , wheat chappati,brown bread, white bread,multi grain bread,maize
+different categories of everything in diet choices folder.
+fish,mutton,milk add in diet choices
+milk - soya milk,badam milk and other types.
+healthy drinks -> fresh juices, smoothies.
+vegetables
+other healthy options in diet choices
+oats,chocos,muesli,cornflakes,sprouts
